@@ -1,0 +1,57 @@
+@import "tailwindcss";
+@plugin "daisyui";
+/* --- Smooth & Momentum Scrolling --- */
+
+/* Smooth scrolling for all scrollable elements */
+html {
+  scroll-behavior: smooth;
+}
+
+@theme {
+  --color-sport-primary: #FCB53B;
+  --color-sport-primary-focus: #FFD47A;
+  --color-sport-primary-content: #232323;
+
+  --color-sport-success: #84994F;
+  --color-sport-highlight: #FFE797;
+  --color-sport-danger: #B45253;
+
+  --color-sport-base-100: #FFFFFF;
+  --color-sport-base-200: #F9F9F9;
+  --color-sport-base-300: #F2F2F2;
+
+  --color-sport-text: #232323;
+  --color-sport-text-secondary: #444444;
+}
+
+
+/* iOS-style momentum scrolling */
+* {
+  -webkit-overflow-scrolling: touch;
+}
+
+/* --- Hide Scrollbars Completely --- */
+
+/* For Chrome, Edge, and Safari */
+::-webkit-scrollbar {
+  display: none !important;
+  width: 0 !important;
+  height: 0 !important;
+  background: transparent !important;
+}
+
+/* For Firefox */
+* {
+  scrollbar-width: none !important;
+  scrollbar-color: transparent transparent !important;
+}
+
+/* For IE and Edge (legacy) */
+body {
+  -ms-overflow-style: none !important;
+}
+
+/* For all elements, hide scrollbar in overflow */
+*::-webkit-scrollbar {
+  display: none !important;
+}
