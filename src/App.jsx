@@ -5,7 +5,7 @@ import ExplorePage from "./pages/ExplorePage";
 import EventDetails from "./pages/EventDetails";
 import Checkout from "./pages/Checkout";
 
-function App() {
+const App = () => {
   return (
     <div className="fixed inset-0 flex justify-center items-center bg-black/50">
       <Router>

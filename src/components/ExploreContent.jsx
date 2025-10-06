@@ -86,14 +86,14 @@ const ExploreContent = () => {
   return (
     <div className="px-4 py-2 bg-sport-base-100">
       {/* Hot Events Section */}
-      <div className="mt-4">
+      <div>
         <h2 className="text-sport-text font-semibold text-sm mb-2">
           🔥 Popular This Week
         </h2>
         <Carousel items={hotEvents} itemWidth={160} />
       </div>
 
-      <div className="flex items-center my-6">
+      <div className="flex items-center my-4">
         <div className="flex-1 h-px bg-gradient-to-r from-transparent via-sport-text-secondary to-transparent" />
         <span className="mx-4 text-xs font-medium text-sport-text-secondary uppercase tracking-wider">
           all events

@@ -42,7 +42,7 @@ const MyEvents = () => {
   }
 
   return (
-    <div className="p-4">
+    <div className="p-3">
       {/* Heading with fading divider */}
       <div className="flex items-center mb-6 mt-2">
         <div className="flex-1 h-px bg-gradient-to-r from-transparent via-sport-text-secondary to-transparent" />
@@ -59,19 +59,21 @@ const MyEvents = () => {
             state={{ sessionIndex: null }}
             className="group"
           >
-            <div className="flex items-center gap-4 p-4 rounded-xl border border-sport-base-200 shadow bg-gradient-to-br from-sport-base-100 via-sport-base-200/80 to-sport-base-100 hover:shadow-lg transition relative overflow-hidden">
+            <div className="relative flex items-center gap-3 p-3 rounded-xl bg-sport-base-100 shadow-md hover:shadow-lg transition-transform hover:-translate-y-1 group overflow-hidden">
               {/* Accent bar */}
               <div className="absolute left-0 top-0 h-full w-1 bg-gradient-to-b from-sport-primary to-yellow-400 rounded-l-xl opacity-80 group-hover:opacity-100 transition" />
 
               {/* Event Image */}
-              <img
-                src={event.image}
-                alt={event.name}
-                className="w-20 h-20 object-cover rounded-lg border-2 border-sport-base-200 shadow-sm group-hover:scale-105 transition"
-              />
+              <div className="flex-shrink-0 relative">
+                <img
+                  src={event.image}
+                  alt={event.name}
+                  className="w-16 h-16 object-cover rounded-lg border border-sport-base-200 shadow-sm group-hover:scale-105 transition-transform"
+                />
+              </div>
 
               {/* Event Info */}
-              <div className="flex flex-col flex-1 z-10">
+              <div className="flex flex-col flex-1 overflow-hidden z-10">
                 <div className="flex items-center gap-2 mb-1">
                   {event.sessionTime && (
                     <span className="inline-flex items-center gap-1 px-2 py-0.5 rounded-full border border-sport-primary/10 text-sport-primary text-xs font-medium bg-sport-primary/10">
@@ -80,11 +82,11 @@ const MyEvents = () => {
                     </span>
                   )}
                 </div>
-                <h2 className="font-semibold text-sport-text text-base truncate">{event.name}</h2>
-                <div className="flex items-center gap-1 text-sport-text-secondary text-xs mt-1">
-                  <MapPin size={14} className="text-sport-primary" />
+                <h2 className="font-semibold text-sport-text text-sm truncate">{event.name}</h2>
+                <span className="flex items-center gap-1 text-sport-text-secondary text-xs mt-1">
+                  <MapPin size={13} className="text-sport-primary" />
                   <span className="truncate">{event.location}</span>
-                </div>
+                </span>
               </div>
             </div>
           </Link>
