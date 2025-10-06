@@ -9,16 +9,14 @@ const Navbar = () => {
           src="https://avatar.iran.liara.run/public"
           alt="Profile"
           className="w-full h-full object-cover"
+          loading="eager" // load immediately since it's always visible
+          decoding="async" // let browser decode asynchronously for smoother paint
         />
       </button>
 
       {/* Center: Logo */}
       <div className="flex items-center justify-center">
-        <img
-          src="/logo.png"
-          alt="Rally Events Logo"
-          className="h-9 w-auto"
-        />
+        <img src="/logo.png" alt="Rally Events Logo" className="h-9 w-auto" />
       </div>
 
       {/* Right: Settings */}
